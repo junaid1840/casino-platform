@@ -1,12 +1,12 @@
 import { createContext } from "react";
 import { iApiResponse } from "../api-manager/apiManagerInterfaces";
-import { bookActionTypes } from "../../redux/types/book/bookType";
+import { cryptoActionTypes } from "../../redux/types/crypto/cryptoType";
 import { Dispatch } from "redux";
 
 export interface iGlobalContext {
   showLoader: boolean;
   globalDispatch: (
-    effect: (dispatch: Dispatch<bookActionTypes>) => Promise<iApiResponse>
+    effect: (dispatch: Dispatch<cryptoActionTypes>) => Promise<iApiResponse>
   ) => Promise<iApiResponse>;
 }
 

@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import { bookReducer } from "./book/bookReducer";
+import { cryptoReducer } from "./crypto/cryptoReducer";
 
 export const rootReducer = combineReducers({
-  bookReducer,
+  cryptoReducer: cryptoReducer,
 });

@@ -3,7 +3,7 @@ import { GlobalContext } from "./GlobalContext";
 import { useDispatch } from "react-redux";
 import { iApiResponse } from "../api-manager/apiManagerInterfaces";
 import { Dispatch } from "redux";
-import { bookActionTypes } from "../../redux/types/book/bookType";
+import { cryptoActionTypes } from "../../redux/types/crypto/cryptoType";
 
 interface iGlobalProviderProps {
   children: ReactChild;
@@ -15,7 +15,7 @@ export const GlobalProvider: FC<iGlobalProviderProps> = ({
   const [showLoader, setShowLoader] = useState(false);
 
   const globalDispatch = async (
-    effect: (dispatch: Dispatch<bookActionTypes>) => Promise<iApiResponse>,
+    effect: (dispatch: Dispatch<cryptoActionTypes>) => Promise<iApiResponse>,
     showLoader = true
   ): Promise<iApiResponse> => {
     setShowLoader(showLoader);

@@ -1,5 +1,5 @@
 import { iRoutes } from "./routesInterface";
-import { Home } from "../component/home/Home";
+import { Home } from "../pages/home/Home";
 import { ROUTES } from "./routeConstants";
 
 const { HOME_PAGE } = ROUTES;
