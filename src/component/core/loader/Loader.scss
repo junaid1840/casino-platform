@@ -1,5 +1,9 @@
 @import "./src/assets/scss/variables";
-
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .dot-pulse {
   position: relative;
   left: -9999px;
