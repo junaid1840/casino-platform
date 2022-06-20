@@ -1,3 +1,4 @@
 [build]
     REACT_APP_BASE_URL="https://api.blocktap.io/graphql"
     REACT_APP_ACCESS_TOKEN="9ec872174277d8ada0c4b0cb210c853da0d37f704e2f543f5b20983a68c3b3a0"
+    environment = { REACT_APP_BASE_URL="https://api.blocktap.io/graphql", REACT_APP_ACCESS_TOKEN="9ec872174277d8ada0c4b0cb210c853da0d37f704e2f543f5b20983a68c3b3a0" }
