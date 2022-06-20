@@ -10,10 +10,13 @@ body {
   text-rendering: optimizeLegibility;
   color: $color-white;
   background-color: $color-purple;
+  height: 100%;
+}
+#root {
   height: 100vh;
 }
 .container {
-  height: 90vh;
+  min-height: 90vh;
   margin: 0;
   padding: 3rem 5rem;
   background-image: $background-image-figure, $background-image-pattern;
@@ -26,7 +29,6 @@ body {
 
 @media screen and (max-width: $max-width-sm) {
   .container {
-    height: 100%;
     padding: 3rem 1rem;
     background-position: bottom left, top right -300px;
     background-size: 12%, 100%;

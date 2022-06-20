@@ -1,20 +1,10 @@
 import {
   ADD_CRYPTO_DETAILS_LIST,
   DELETE_CRYPTO_DETAILS_LIST,
-  GET_CRYPTO_DETAILS,
   IAddCryptoDetailsList,
-  ICryptDetailsPayload,
   ICryptoDetails,
   IDeleteCryptoDetailsList,
-  IGetCryptoDetails,
 } from "../../types/crypto/cryptoType";
-
-export const getCryptoDetailsAction = (
-  cryptoDetails: ICryptDetailsPayload
-): IGetCryptoDetails => ({
-  type: GET_CRYPTO_DETAILS,
-  payload: cryptoDetails,
-});
 
 export const addCryptoDetailsListAction = (
   cryptoDetails: ICryptoDetails
