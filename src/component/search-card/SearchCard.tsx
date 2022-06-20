@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FC, FormEvent, useState } from "react";
 import "./SearchCard.scss";
-import { Button } from "../core/Button/Button";
+import { Button } from "../core/button/Button";
 import { SEARCH_CARD_LABELS } from "./searchCard.labels";
 import { useDispatch, useSelector } from "react-redux";
 import { AppState } from "../../redux/store";
