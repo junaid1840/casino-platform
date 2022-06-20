@@ -1,4 +1,4 @@
-# Getting Started with Create React Home
+# Getting Started with Casino Platform
 
 This project was bootstrapped Boilerplate ->  [react-redux-boilerplate](https://github.com/junaid1840/react-thunk-scss-boilerplater).
 
