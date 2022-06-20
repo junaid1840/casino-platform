@@ -1,7 +1,9 @@
 # Getting Started with Create React Home
 
-This project was bootstrapped with [Create React Home](https://github.com/facebook/create-react-app).
+This project was bootstrapped Boilerplate ->  [react-redux-boilerplate](https://github.com/junaid1840/react-thunk-scss-boilerplater).
 
+## Data Flow Diagram
+![Screenshot](./readme-assets/data_flow_diagram.jpg)
 ## Install all packages
 
 ### `npm install`

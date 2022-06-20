@@ -1,0 +1,36 @@
+@import "variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  text-rendering: optimizeLegibility;
+  color: $color-white;
+  background-color: $color-purple;
+  height: 100%;
+}
+#root {
+  height: 100vh;
+}
+.container {
+  min-height: 90vh;
+  margin: 0;
+  padding: 3rem 5rem;
+  background-image: $background-image-figure, $background-image-pattern;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: bottom center , top right -800px;
+  background-size: 25%, 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+@media screen and (max-width: $max-width-sm) {
+  .container {
+    padding: 3rem 1rem;
+    background-position: bottom left, top right -300px;
+    background-size: 12%, 100%;
+  }
+}

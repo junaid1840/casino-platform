@@ -1,0 +1,16 @@
+@import "./src/assets/scss/variables";
+
+.footer {
+  background: white;
+  color: black;
+  padding: 1rem 8rem;
+  text-align: center;
+  font-size: 14px;
+  width: 100%;
+}
+
+@media screen and (max-width: $max-width-sm) {
+  .footer {
+    padding: 1rem;
+  }
+}
