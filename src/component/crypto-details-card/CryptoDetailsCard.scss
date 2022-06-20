@@ -4,7 +4,13 @@
   display: flex;
   gap: 2em;
   padding: 0.5em 0;
-  border-bottom: 1px solid $color-grey;
+}
+
+.crypto-details-card-separator {
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(to right, #5b4370 0%, #24033f 103%);
+  background-position: 0, 100%, 0, 100%;
 }
 
 

@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { ChangeEvent, FC, FormEvent, useState } from "react";
 import "./SearchCard.scss";
 import { Button } from "../core/Button/Button";
 import { SEARCH_CARD_LABELS } from "./searchCard.labels";
@@ -24,9 +24,7 @@ export const SearchCard: FC = () => {
   const [cryptoSymbol, setCryptoSymbol] = useState<string>("");
   const [searchErrorMessage, setSearchErrorMessage] = useState<string>("");
 
-  const handleCryptoCodeChange = (
-    e: React.ChangeEvent<HTMLInputElement>
-  ): void => {
+  const handleCryptoCodeChange = (e: ChangeEvent<HTMLInputElement>): void => {
     setCryptoSymbol(e.target.value);
     setSearchErrorMessage("");
   };
@@ -49,7 +47,10 @@ export const SearchCard: FC = () => {
     onCompleted: addToCryptoDetailsList,
   });
 
-  const getCryptoBySymbol = async (): Promise<void> => {
+  const getCryptoBySymbol = async (
+    e: FormEvent<HTMLFormElement>
+  ): Promise<void> => {
+    e.preventDefault();
     if (getCryptoDetailItem(cryptoDetailsList, cryptoSymbol)) {
       setSearchErrorMessage(
         ERROR_MESSAGE.CRYPTO_ITEM_ALREADY_IN_LIST(cryptoSymbol)
@@ -63,19 +64,17 @@ export const SearchCard: FC = () => {
 
   return (
     <div className="search-card-wrapper">
-      <Input
-        className="search-card-input"
-        placeholder={SEARCH_CARD_LABELS.searchInputPlaceHolderText}
-        value={cryptoSymbol}
-        onChange={(e) => handleCryptoCodeChange(e)}
-      />
-      <Button
-        className="add-btn"
-        onClick={getCryptoBySymbol}
-        disabled={loading}
-      >
-        {loading ? <Loader /> : SEARCH_CARD_LABELS.addButtonText}
-      </Button>
+      <form onSubmit={getCryptoBySymbol}>
+        <Input
+          className="search-card-input"
+          placeholder={SEARCH_CARD_LABELS.searchInputPlaceHolderText}
+          value={cryptoSymbol}
+          onChange={(e) => handleCryptoCodeChange(e)}
+        />
+        <Button className="add-btn" disabled={loading} type="submit">
+          {loading ? <Loader /> : SEARCH_CARD_LABELS.addButtonText}
+        </Button>
+      </form>
       {<span className="error-message">{searchErrorMessage}</span>}
       <p className="disclaimer">{SEARCH_CARD_LABELS.disclaimer}</p>
     </div>

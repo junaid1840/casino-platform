@@ -18,17 +18,22 @@ export const CryptoDetailsCard: FC<ICryptoDetailsCardProps> = ({
     dispatch(deleteCryptoDetailsListAction(index));
 
   return (
-    <div className="crypto-details-card-wrapper">
-      <div className="card-logo">
-        <img src={cardLogo} alt="card-logo" />
+    <>
+      <div className="crypto-details-card-wrapper">
+        <div className="card-logo">
+          <img src={cardLogo} alt="card-logo" />
+        </div>
+        <div className="crypto-details-card-content-wrapper">
+          <div className="crypto-symbol">{cryptoSymbol}</div>
+          <div className="crypto-price">
+            {Number(cryptoPrice).toFixed(2)} EUR
+          </div>
+        </div>
+        <div className="delete-icon" onClick={deleteCryptoDetailItem}>
+          <span>x</span>
+        </div>
       </div>
-      <div className="crypto-details-card-content-wrapper">
-        <div className="crypto-symbol">{cryptoSymbol}</div>
-        <div className="crypto-price">{Number(cryptoPrice).toFixed(2)} EUR</div>
-      </div>
-      <div className="delete-icon" onClick={deleteCryptoDetailItem}>
-        <span>x</span>
-      </div>
-    </div>
+      <div className="crypto-details-card-separator"></div>
+    </>
   );
 };
